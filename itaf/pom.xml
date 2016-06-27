@@ -19,6 +19,18 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<skipTests>${skip.tests}</skipTests>
+					<suiteXmlFiles>
+						<SuiteXmlFile>${basedir}\amazon\src\main\resources\TestSuites\${SuiteFile}</SuiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.12.2</version>
 				<configuration>
 					<skipTests>true</skipTests>
