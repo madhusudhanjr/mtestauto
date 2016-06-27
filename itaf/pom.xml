@@ -14,7 +14,6 @@
 	</modules>
 
 	<build>
-		<finalName>itaf</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -22,7 +21,7 @@
 				<version>2.5</version>
 				<configuration>
 					<suiteXmlFiles>
-						<SuiteXmlFile>${project.build.directory}/../../amazon/src/main/resources/TestSuites/${SuiteFile}</SuiteXmlFile>
+						<SuiteXmlFile>${basedir}\src\test\resources\TestSuites\${SuiteFile}</SuiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
