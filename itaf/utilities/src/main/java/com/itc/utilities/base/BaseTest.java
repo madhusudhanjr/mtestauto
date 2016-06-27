@@ -239,7 +239,9 @@ public class BaseTest {
 					+ Thread.currentThread().getId() + "\t WEBDRIVER:"
 					+ getDriverInstanceForThread() + " ****************** \n");
 
-			CommonHelper.maximizeWindow(getDriverInstanceForThread());
+			if (m_executionMode.equalsIgnoreCase(ExecutionMode.WEB_BROWSER
+					.toString()))
+				CommonHelper.maximizeWindow(getDriverInstanceForThread());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
