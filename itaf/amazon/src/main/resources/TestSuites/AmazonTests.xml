@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Amazon Test Suite" verbose="1">
+
+	<listeners>
+		<listener class-name="com.itc.framework.reporters.ITAFListener" />
+		<listener class-name="com.itc.framework.reporters.ITAFSuiteListener" />
+		<listener class-name="com.itc.framework.reporters.ITAFCustomReport" />
+	</listeners>
+
+	<parameter name="mode" value="android_app" />
+	<parameter name="customer" value="Amazon" />
+	<parameter name="url" value="https://www.amazon.in" />
+	<parameter name="browser" value="android_app" />
+	<test name="Amazon Search Results">
+		<classes>
+			<class name="com.itc.amazon.tests.AmazonSearch">
+				<methods>
+					<include name="searchResults"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
