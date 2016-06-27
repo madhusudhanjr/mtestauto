@@ -8,10 +8,10 @@
 		<listener class-name="com.itc.framework.reporters.ITAFCustomReport" />
 	</listeners>
 
-	<parameter name="mode" value="web_browser" />
-	<parameter name="customer" value="Amazon" />
-	<parameter name="url" value="https://www.amazon.in" />
-	<parameter name="browser" value="chrome" />
+	<parameter name="mode" value="" />
+	<parameter name="customer" value="" />
+	<parameter name="url" value="" />
+	<parameter name="browser" value="" />
 	<test name="Amazon Search Results">
 		<classes>
 			<class name="com.itc.amazon.tests.AmazonSearch">
