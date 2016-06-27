@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.TestNG;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -52,6 +53,7 @@ public class AmazonSearch extends BaseTest {
 		Log.info("Search Result Text:: " + results);
 		Assert.assertTrue(!results.isEmpty(), "Search Results NOT displayed!!!");
 		Log.info("Search Results verified successfully!!!");
+		Reporter.log("Search Results verified successfully:: " + results);
 	}
 
 	@DataProvider(name = "TestData")
