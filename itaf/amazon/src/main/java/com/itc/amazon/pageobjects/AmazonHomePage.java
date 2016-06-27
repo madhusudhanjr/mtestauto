@@ -146,10 +146,16 @@ public class AmazonHomePage extends Page {
 			TextBoxElement.clearAndEnterText("Search Text Box",
 					getSearhTextBox(executionMode), testData,
 					(AndroidDriver) m_pageDriver, executionMode);
-		else
+		else {
+
+			if (testData.contains("TestData_"))
+				testData = getTestData("amazon_homepage_search", customer,
+						testData);
+
 			TextBoxElement.clearAndEnterText("Search Text Box",
 					getSearhTextBox(executionMode), testData, null,
 					executionMode);
+		}
 
 		ButtonElement.click("Search Submit Button",
 				getSearchSubmitButton(executionMode));
