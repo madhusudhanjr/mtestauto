@@ -20,7 +20,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.5</version>
 				<configuration>
-				<skipTests>true</skipTests>
+				<skipTests>${skip.tests}</skipTests>
 					<suiteXmlFiles>
 						<SuiteXmlFile>${basedir}\src\test\resources\TestSuites\${SuiteFile}</SuiteXmlFile>
 					</suiteXmlFiles>
