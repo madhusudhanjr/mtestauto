@@ -200,6 +200,7 @@ public class BaseTest {
 			param.put("url", m_url);
 			param.put("mode", m_executionMode);
 			context.getCurrentXmlTest().setParameters(param);
+			
 		}
 
 		initialize(context);
